@@ -1,0 +1,125 @@
+<?xml version="1.0"?>
+<project>
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>org.nuxeo.ecm.platform</groupId>
+		<artifactId>nuxeo-features-parent</artifactId>
+		<version>5.7-SNAPSHOT</version>
+	</parent>
+
+	<groupId>org.nuxeo.ecm.plaform.rendering</groupId>
+	<artifactId>nuxeo-platform-rendering-xwiki</artifactId>
+	<name>nuxeo-platform-rendering-xwiki</name>
+	<description>
+
+	</description>
+
+	<properties>
+		<xwiki.version>4.4.1</xwiki.version>
+	</properties>
+
+	<dependencies>
+
+		<dependency>
+			<groupId>org.nuxeo.ecm.core</groupId>
+			<artifactId>nuxeo-core-api</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.nuxeo.ecm.platform</groupId>
+			<artifactId>nuxeo-platform-rendering</artifactId>
+		</dependency>
+
+
+		<!-- XWiki dependencies -->
+		<dependency>
+			<groupId>org.xwiki.rendering</groupId>
+			<artifactId>xwiki-rendering-api</artifactId>
+			<version>${xwiki.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.xwiki.commons</groupId>
+			<artifactId>xwiki-commons-component-default</artifactId>
+			<version>${xwiki.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.xwiki.rendering</groupId>
+			<artifactId>xwiki-rendering-syntax-xhtml</artifactId>
+			<version>${xwiki.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.xwiki.rendering</groupId>
+			<artifactId>xwiki-rendering-syntax-xwiki21</artifactId>
+			<version>${xwiki.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.xwiki.rendering</groupId>
+			<artifactId>xwiki-rendering-transformation-macro</artifactId>
+			<version>${xwiki.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.xwiki.rendering</groupId>
+			<artifactId>xwiki-rendering-macro-toc</artifactId>
+			<version>${xwiki.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.xwiki.rendering</groupId>
+			<artifactId>xwiki-rendering-macro-box</artifactId>
+			<version>${xwiki.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-beanutils</groupId>
+			<artifactId>commons-beanutils</artifactId>
+			<version>1.8.3</version>
+		</dependency>
+	</dependencies>
+
+	<repositories>
+		<repository>
+			<id>public</id>
+			<url>http://maven.nuxeo.org/nexus/content/groups/public</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>public-snapshot</id>
+			<url>http://maven.nuxeo.org/nexus/content/groups/public-snapshot
+			</url>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+			<snapshots>
+				<updatePolicy>always</updatePolicy>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-eclipse-plugin</artifactId>
+				<configuration>
+					<additionalProjectnatures>
+						<projectnature>org.nuxeo.ide.NuxeoNature</projectnature>
+					</additionalProjectnatures>
+					<classpathContainers>
+						<classpathContainer>org.eclipse.jdt.launching.JRE_CONTAINER
+						</classpathContainer>
+						<classpathContainer>org.nuxeo.ide.SDK_CONTAINER
+						</classpathContainer>
+						<classpathContainer>org.nuxeo.ide.SDK_TEST_CONTAINER
+						</classpathContainer>
+					</classpathContainers>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>

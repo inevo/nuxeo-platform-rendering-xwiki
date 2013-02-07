@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<component name="org.nuxeo.ecm.platform.rendering.xwiki">
+
+  <extension target="org.nuxeo.ecm.webengine.WebEngineComponent" point="rendering-extension">
+    <rendering-extension name="xwiki" class="org.nuxeo.ecm.plaform.rendering.xwiki.XWikiTransformer"/>
+  </extension>
+  
+</component>
